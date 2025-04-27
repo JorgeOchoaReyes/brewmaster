@@ -4,13 +4,26 @@ import { getAuth, updateProfile, sendPasswordResetEmail, signOut, onAuthStateCha
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
+import { api } from "~/utils/api";
 
 export default function SettingsPage() {
   const auth = getAuth();
   const router = useRouter();
   const [user, setUser] = useState(auth.currentUser);
   const [name, setName] = useState("");
+  const [steamAccountId, setSteamAccountId] = useState("");
   const [message, setMessage] = useState("");
+
+  const updateSteamAccountId = api.user.saveSteamAccountId.useMutation();
+  const readSteamAccountId = api.user.readSteamAccountId.useQuery(undefined, {
+    refetchOnWindowFocus: false,
+  });
+
+  useEffect(() => {
+    if (readSteamAccountId.data) {
+      setSteamAccountId(readSteamAccountId.data);
+    }
+  }, [readSteamAccountId.data]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
@@ -62,6 +75,16 @@ export default function SettingsPage() {
     }
   };
 
+  const handleSaveSteamAccountId = async () => {
+    if (!user) return;
+    try {
+      await updateSteamAccountId.mutateAsync({ streamAccountId: steamAccountId });
+      setMessage("Steam Account ID saved successfully!");
+    } catch (_error) {
+      setMessage("Failed to save Steam Account ID. Please try again.");
+    }
+  };
+
   return (
     <div className="mx-auto mt-10">
       <Card className="w-full max-w-md mx-auto bg-white shadow-lg rounded-lg p-6">
@@ -78,6 +101,18 @@ export default function SettingsPage() {
             />
             <Button className="mt-2 w-full" onClick={handleUpdateName}>
               Update Name
+            </Button>
+          </div>
+
+          <div>
+            <label className="block mb-1 font-semibold">Steam Account Id</label>
+            <Input
+              value={steamAccountId}
+              onChange={(e) => setSteamAccountId(e.target.value)}
+              placeholder="Enter your steam account id"
+            />
+            <Button className="mt-2 w-full" onClick={handleSaveSteamAccountId}>
+              Update Steam Account Id
             </Button>
           </div>
 

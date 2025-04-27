@@ -178,8 +178,7 @@ const TitleSection: React.FC<{open: boolean, user: User | null}> = ({ open, user
               <span className="block text-xs text-slate-500">{user?.email}</span>
             </motion.div>
           )}
-        </div>
-        {open && <FiChevronDown className="mr-2" />}
+        </div> 
       </div>
     </div>
   );

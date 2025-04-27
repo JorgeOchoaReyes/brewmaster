@@ -1,7 +1,9 @@
 import React from "react";  
+import { api } from "~/utils/api";
 
 export default function MatchHistory() {  
 
+  const MatchHistory = api.dota.getMatchHistory.useQuery(); 
 
   return (
     <>

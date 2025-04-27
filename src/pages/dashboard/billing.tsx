@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { auth } from "~/firebase";
@@ -22,7 +20,6 @@ export default function Dashboard() {
   const router = useRouter();
 
   useEffect(() => { 
-
     if (user) {
       const fetchSubscription = async () => {
         try {

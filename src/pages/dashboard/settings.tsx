@@ -5,6 +5,7 @@ import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
 import { api } from "~/utils/api";
+import { Loader2 } from "lucide-react";
 
 export default function SettingsPage() {
   const auth = getAuth();
@@ -103,19 +104,20 @@ export default function SettingsPage() {
               Update Name
             </Button>
           </div>
-
-          <div>
-            <label className="block mb-1 font-semibold">Steam Account Id</label>
-            <Input
-              value={steamAccountId}
-              onChange={(e) => setSteamAccountId(e.target.value)}
-              placeholder="Enter your steam account id"
-            />
-            <Button className="mt-2 w-full" onClick={handleSaveSteamAccountId}>
-              Update Steam Account Id
-            </Button>
-          </div>
-
+          {
+            readSteamAccountId.isLoading ? <Loader2 className="animate-spin self-center" /> :
+              <div>
+                <label className="block mb-1 font-semibold">Steam Account Id</label>
+                <Input
+                  value={steamAccountId}
+                  onChange={(e) => setSteamAccountId(e.target.value)}
+                  placeholder="Enter your steam account id"
+                />
+                <Button className="mt-2 w-full" onClick={handleSaveSteamAccountId}>
+                  {updateSteamAccountId.isPending ? <Loader2 className="animate-spin" /> : "Update Steam Account Id"}
+                </Button>
+              </div>
+          }
           <div className="mt-4">
             <Button variant="outline" className="w-full" onClick={handleResetPassword}>
               Send Password Reset Email

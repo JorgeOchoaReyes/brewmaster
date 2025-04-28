@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";  
 import { SteamProfileCard } from "~/components/card/profile-card";
 import { api } from "~/utils/api";
-import { type DotaPlayerAccount } from "../types";
+import { type DotaPlayerAccount } from "../../types";
 import { Loader2 } from "lucide-react";
 
 export default function Dashboard() {   
@@ -15,7 +15,7 @@ export default function Dashboard() {
   return ( 
     <div className="flex flex-col p-10">
       {
-        !dotaProfile.data ? (
+        dotaProfile.isPending ? (
           <div className="flex items-center justify-center h-screen">
             <Loader2 className="animate-spin" size={24} />
           </div>

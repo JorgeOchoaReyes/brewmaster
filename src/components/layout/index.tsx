@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import {
-  FiChevronDown,
+import { 
   FiChevronsRight,
   FiCreditCard,
   FiDollarSign,
@@ -21,7 +20,8 @@ export const Layout: React.FC<{children: React.ReactNode}> = ({children}) => {
   const [user,loading] = useAuthState(auth);
   const router = useRouter();
   const pathname = router.pathname; 
-  const _title = pathname.split("/")?.slice(-1)?.[0]?.replace(/-/g, " ") ?? "Dashboard";
+  let _title = pathname.split("/")?.slice(-1)?.[0]?.replace(/-/g, " ") ?? "Dashboard";
+  _title = _title === "[id]" ? "Match Details" : _title;
   const titleWithCapitalization = _title.charAt(0).toUpperCase() + _title.slice(1); 
   if (loading) return <Loading />; 
   if(!user) {
@@ -200,7 +200,7 @@ const ToggleClose: React.FC<{open: boolean, setOpen: React.Dispatch<React.SetSta
     <motion.button
       layout
       onClick={() => setOpen((pv) => !pv)}
-      className="absolute bottom-0 left-0 right-0 border-t border-slate-300 transition-colors hover:bg-slate-100"
+      className="absolute bottom-0 left-0 right-0 border-t border-slate-300 transition-colors hover:bg-slate-100 cursor-pointer"
     >
       <div className="flex items-center p-2">
         <motion.div

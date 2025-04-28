@@ -1,6 +1,7 @@
-import type { MatchHistoryRef } from "~/pages/types";
+import type { MatchHistoryRef } from "~/types";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../../components/ui/table";
 import { format } from "date-fns";
+import { useRouter } from "next/router";
  
 const formatDuration = (seconds: number): string => {
   const minutes = Math.floor(seconds / 60);
@@ -14,6 +15,7 @@ const didPlayerWin = (playerSlot: number, radiantWin: boolean): boolean => {
 };
 
 export const MatchDataTable = ({matchesData}: {matchesData: MatchHistoryRef[]}) => {
+  const router = useRouter();
   return (
     <div className="rounded-md border bg-white">
       <Table>
@@ -37,7 +39,9 @@ export const MatchDataTable = ({matchesData}: {matchesData: MatchHistoryRef[]}) 
             const playerWon = didPlayerWin(match.player_slot, match.radiant_win);
 
             return (
-              <TableRow key={match.match_id}>
+              <TableRow key={match.match_id} className="cursor-pointer hover:bg-gray-100 transition-colors duration-200" onClick={async (e) => {
+                await router.push(`/dashboard/match-history/${match.match_id}`);
+              }}>
                 <TableCell>{match.match_id}</TableCell>
                 <TableCell>{match.hero_id}</TableCell>
                 <TableCell>

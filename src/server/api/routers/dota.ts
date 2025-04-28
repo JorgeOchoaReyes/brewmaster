@@ -1,4 +1,4 @@
-import { type DotaMatchHistory, type DotaPlayerAccount } from "./../../../pages/types/index";
+import { type DotaMatchHistory, type DotaPlayerAccount, type MatchDetails, type PlayerMatchContributions } from "../../../types/index";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "~/server/api/trpc";
 
@@ -56,7 +56,8 @@ export const dotaRouter = createTRPCRouter({
     }),
 
   getMatchFullDetails: protectedProcedure
-    .query(async ({ input, ctx}) => {  
+    .input(z.object({ matchId: z.number() }))
+    .mutation(async ({ input, ctx}) => {  
       const user = ctx.session.user;
       const db = ctx.db;
       if (!user) {
@@ -71,11 +72,25 @@ export const dotaRouter = createTRPCRouter({
       const accountId = steamAccountId.steamAccountId;
       if (!accountId) {
         throw new Error("Account ID not found in database");
-      }
-      const apiUrl = process.env.DOTA_API_URL + `/players/${accountId}`;
-
-      const queryAMatch = "SELECT * FROM matches WHERE match_id = [your_match_id_here]"; 
-      const queryPlayerDetails = `
+      } 
+ 
+      const queryAMatch = encodeURIComponent(`SELECT 
+        match_id, 
+        start_time,
+        duration,
+        radiant_win, 
+        radiant_score, 
+        dire_score, 
+        game_mode,
+        lobby_type, 
+        picks_bans, 
+        radiant_gold_adv, 
+        radiant_xp_adv, 
+        duration, 
+        teamfights, 
+        objectives
+        FROM matches WHERE match_id = ${input.matchId};`); 
+      const queryPlayerDetails = encodeURIComponent(`
         SELECT
           pm.match_id,
           m.match_seq_num,
@@ -116,8 +131,26 @@ export const dotaRouter = createTRPCRouter({
         LEFT JOIN teams rt ON m.radiant_team_id = rt.team_id
         LEFT JOIN teams dt ON m.dire_team_id = dt.team_id
         WHERE
-          m.match_id = 8270889523;
-      `;
+          m.match_id = ${input.matchId};
+      `);
+
+      const apiQueryMatch = process.env.DOTA_API_URL + `/explorer?sql=${queryAMatch}`;
+      const apiQueryPlayerDetails = process.env.DOTA_API_URL + `/explorer?sql=${queryPlayerDetails}`;
+
+      try {
+        const responseMatch = await fetch(apiQueryMatch);
+        const responsePlayerDetails = await fetch(apiQueryPlayerDetails);
+           
+  
+        const dataMatch = ((await responseMatch.json()) as {rows: MatchDetails[]}).rows[0]; 
+
+
+        const dataPlayerDetails = (await responsePlayerDetails.json()) as PlayerMatchContributions[]; 
+        return { dataMatch, dataPlayerDetails };
+      } catch (error) {
+        console.error("Error fetching match details:", error);
+        return null;
+      }
 
     }),
 });

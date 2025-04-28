@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Badge } from "../ui/badge";
 import { ExternalLink, User } from "lucide-react";
 import Link from "next/link";
-import { type DotaPlayerAccount } from "~/pages/types";
+import { type DotaPlayerAccount } from "~/types";
  
 
 export const SteamProfileCard = ({ data }: { data: DotaPlayerAccount | null }) => { 

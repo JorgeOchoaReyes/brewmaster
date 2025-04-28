@@ -33,7 +33,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           });
           return;
         }
-        nookies.set(null, "firebase-token", token, { path: "/" });
+        nookies.set(null, "firebase-token", token, { path: "/" });  
       },
       (error) => {
         console.error("Error getting token:", error);

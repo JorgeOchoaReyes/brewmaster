@@ -1,9 +1,61 @@
-import { type DotaMatchHistory } from "./../../../pages/types/index";
+import { type DotaMatchHistory, type DotaPlayerAccount } from "./../../../pages/types/index";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "~/server/api/trpc";
 
 export const dotaRouter = createTRPCRouter({
   getMatchHistory: protectedProcedure 
+    .query(async ({ input, ctx}) => {  
+      const user = ctx.session.user;
+      const db = ctx.db;
+      if (!user) {
+        throw new Error("User not found");
+      }
+      const userId = user.uid;
+      const getAccountId  = await db.collection("users").doc(userId).get();
+      if (!getAccountId.exists) {
+        throw new Error("User not found in database");
+      }
+      const steamAccountId = getAccountId.data() as { steamAccountId: string };
+      const accountId = steamAccountId.steamAccountId;
+      if (!accountId) {
+        throw new Error("Account ID not found in database");
+      }
+      const apiUrl = process.env.DOTA_API_URL + `/players/${accountId}/matches?limit=15`;
+      const response = await fetch(apiUrl);
+      if (!response.ok) {
+        throw new Error("Failed to fetch match history");
+      }
+      const data = await response.json() as DotaMatchHistory[];
+      return data;
+ 
+    }),
+  getPlayerProfile: protectedProcedure
+    .query(async ({ ctx }) => {
+      const user = ctx.session.user;
+      const db = ctx.db;
+      if (!user) {
+        throw new Error("User not found");
+      }
+      const userId = user.uid;
+      const getAccountId  = await db.collection("users").doc(userId).get();
+      if (!getAccountId.exists) {
+        throw new Error("User not found in database");
+      }
+      const steamAccountId = getAccountId.data() as { steamAccountId: string };
+      const accountId = steamAccountId.steamAccountId;
+      if (!accountId) {
+        throw new Error("Account ID not found in database");
+      }
+      const apiUrl = process.env.DOTA_API_URL + `/players/${accountId}`;
+      const response = await fetch(apiUrl); 
+      if (!response.ok) {
+        throw new Error("Failed to fetch player profile");
+      }
+      const data = await response.json() as DotaPlayerAccount;
+      return data;
+    }),
+
+  getMatchFullDetails: protectedProcedure
     .query(async ({ input, ctx}) => {  
       const user = ctx.session.user;
       const db = ctx.db;
@@ -67,5 +119,5 @@ export const dotaRouter = createTRPCRouter({
           m.match_id = 8270889523;
       `;
 
-    })
+    }),
 });

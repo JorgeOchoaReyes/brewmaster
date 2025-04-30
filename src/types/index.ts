@@ -113,8 +113,7 @@ export interface Player {
     xp_delta: number
     xp_start: number
     xp_end: number
-  }
-    
+  } 
   
 export interface Objec {
     time: number
@@ -127,7 +126,7 @@ export interface Objec {
     player_slot?: number
     unit?: string
   }
-  
+
 export interface PlayerMatchContributions {
   match_id: number
   match_seq_num: number
@@ -139,103 +138,38 @@ export interface PlayerMatchContributions {
   dire_team_name: string
   player_name: string
   hero_played: string
+  purchase_log: PurchaseLog[]
+  kills_log: KillsLog[]
+  buyback_log: BuybackLog[]
+}
+
+export interface PurchaseLog {
+  time: number
+  key: string
+}
+
+export interface KillsLog {
+  time: number
+  key: string
+}
+
+export interface BuybackLog {
+  time: number
+  slot: number
+  type: string
   player_slot: number
-  account_id: number
-  kills: number
-  deaths: number
-  assists: number
-  leaver_status: number
-  gold: number
-  last_hits: number
-  denies: number
-  gold_per_min: number
-  xp_per_min: number
-  gold_spent: number
-  hero_damage: number
-  tower_damage: number
-  hero_healing: number
-  level: number
-  item_0_name: string
-  item_1_name: string
-  item_2_name: string
-  item_3_name: string
-  item_4_name: string
-  item_5_name: string
-  item_neutral_name: string
-  backpack_0_name: any
-  backpack_1_name: any
-  backpack_2_name: any
-  hero_id: number
-  item_0: number
-  item_1: number
-  item_2: number
-  item_3: number
-  item_4: number
-  item_5: number
-  additional_units: any
-  stuns: number
-  max_hero_hit: any
-  times: number[]
-  gold_t: number[]
-  lh_t: number[]
-  xp_t: number[]
-  obs_log: any[]
-  sen_log: any[]
-  purchase_log: any[]
-  kills_log: any[]
-  buyback_log: any[]
-  lane_pos: any
-  obs: any
-  sen: any
-  actions: any
-  pings: any
-  purchase: any
-  gold_reasons: any
-  xp_reasons: any
-  killed: any
-  item_uses: any
-  ability_uses: any
-  hero_hits: any
-  damage: any
-  damage_taken: any
-  damage_inflictor: any
-  runes: any
-  killed_by: any
-  kill_streaks: any
-  multi_kills: any
-  life_state: any
-  damage_inflictor_received: any
-  obs_placed: number
-  sen_placed: number
-  creeps_stacked: number
-  camps_stacked: number
-  rune_pickups: number
-  obs_left_log: any[]
-  sen_left_log: any[]
-  ability_upgrades_arr: number[]
-  party_id: any
-  permanent_buffs: any
-  backpack_0: number
-  backpack_1: number
-  backpack_2: number
-  runes_log: any[]
-  lane: number
-  lane_role: number
-  is_roaming: boolean
-  firstblood_claimed: number
-  teamfight_participation: number
-  towers_killed: number
-  roshans_killed: number
-  observers_placed: number
-  party_size: any
-  ability_targets: any
-  damage_targets: any
-  dn_t: number[]
-  connection_log: any[]
-  backpack_3: any
-  item_neutral: number
-  net_worth: number
-  hero_variant: number
-  neutral_tokens_log: any[]
-  neutral_item_history: any[]
+}
+
+export interface Log {
+  time: number
+  key?: any
+  type?: string 
+  slot?: number
+  value?: number
+  killer?: number
+  team?: number 
+  player_slot?: number
+  unit?: string
+  player_name?: string
+  hero_name?: string
 }

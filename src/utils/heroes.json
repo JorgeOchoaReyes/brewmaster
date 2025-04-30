@@ -1,0 +1,1498 @@
+[
+  {
+    "hero_id": 94,
+    "localized_name": "Medusa",
+    "internal_name": "npc_dota_hero_medusa",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Disabler",
+      "Durable"
+    ]
+  },
+  {
+    "hero_id": 97,
+    "localized_name": "Magnus",
+    "internal_name": "npc_dota_hero_magnataur",
+    "primary_attr": "all",
+    "roles": [
+      "Initiator",
+      "Disabler",
+      "Nuker",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 103,
+    "localized_name": "Elder Titan",
+    "internal_name": "npc_dota_hero_elder_titan",
+    "primary_attr": "str",
+    "roles": [
+      "Initiator",
+      "Disabler",
+      "Nuker",
+      "Durable"
+    ]
+  },
+  {
+    "hero_id": 23,
+    "localized_name": "Kunkka",
+    "internal_name": "npc_dota_hero_kunkka",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Support",
+      "Disabler",
+      "Initiator",
+      "Durable",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 31,
+    "localized_name": "Lich",
+    "internal_name": "npc_dota_hero_lich",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 29,
+    "localized_name": "Tidehunter",
+    "internal_name": "npc_dota_hero_tidehunter",
+    "primary_attr": "str",
+    "roles": [
+      "Initiator",
+      "Durable",
+      "Disabler",
+      "Nuker",
+      "Carry"
+    ]
+  },
+  {
+    "hero_id": 30,
+    "localized_name": "Witch Doctor",
+    "internal_name": "npc_dota_hero_witch_doctor",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 32,
+    "localized_name": "Riki",
+    "internal_name": "npc_dota_hero_riki",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 36,
+    "localized_name": "Necrophos",
+    "internal_name": "npc_dota_hero_necrolyte",
+    "primary_attr": "int",
+    "roles": [
+      "Carry",
+      "Nuker",
+      "Durable",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 38,
+    "localized_name": "Beastmaster",
+    "internal_name": "npc_dota_hero_beastmaster",
+    "primary_attr": "all",
+    "roles": [
+      "Initiator",
+      "Disabler",
+      "Durable",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 43,
+    "localized_name": "Death Prophet",
+    "internal_name": "npc_dota_hero_death_prophet",
+    "primary_attr": "all",
+    "roles": [
+      "Carry",
+      "Pusher",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 44,
+    "localized_name": "Phantom Assassin",
+    "internal_name": "npc_dota_hero_phantom_assassin",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 46,
+    "localized_name": "Templar Assassin",
+    "internal_name": "npc_dota_hero_templar_assassin",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 57,
+    "localized_name": "Omniknight",
+    "internal_name": "npc_dota_hero_omniknight",
+    "primary_attr": "str",
+    "roles": [
+      "Support",
+      "Durable",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 60,
+    "localized_name": "Night Stalker",
+    "internal_name": "npc_dota_hero_night_stalker",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Initiator",
+      "Durable",
+      "Disabler",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 63,
+    "localized_name": "Weaver",
+    "internal_name": "npc_dota_hero_weaver",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 64,
+    "localized_name": "Jakiro",
+    "internal_name": "npc_dota_hero_jakiro",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Pusher",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 73,
+    "localized_name": "Alchemist",
+    "internal_name": "npc_dota_hero_alchemist",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Support",
+      "Durable",
+      "Disabler",
+      "Initiator",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 77,
+    "localized_name": "Lycan",
+    "internal_name": "npc_dota_hero_lycan",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Pusher",
+      "Durable",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 78,
+    "localized_name": "Brewmaster",
+    "internal_name": "npc_dota_hero_brewmaster",
+    "primary_attr": "all",
+    "roles": [
+      "Carry",
+      "Initiator",
+      "Durable",
+      "Disabler",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 82,
+    "localized_name": "Meepo",
+    "internal_name": "npc_dota_hero_meepo",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Nuker",
+      "Disabler",
+      "Initiator",
+      "Pusher"
+    ]
+  },
+  {
+    "hero_id": 84,
+    "localized_name": "Ogre Magi",
+    "internal_name": "npc_dota_hero_ogre_magi",
+    "primary_attr": "str",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Disabler",
+      "Durable",
+      "Initiator"
+    ]
+  },
+  {
+    "hero_id": 86,
+    "localized_name": "Rubick",
+    "internal_name": "npc_dota_hero_rubick",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Disabler",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 92,
+    "localized_name": "Visage",
+    "internal_name": "npc_dota_hero_visage",
+    "primary_attr": "all",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Durable",
+      "Disabler",
+      "Pusher"
+    ]
+  },
+  {
+    "hero_id": 91,
+    "localized_name": "Io",
+    "internal_name": "npc_dota_hero_wisp",
+    "primary_attr": "all",
+    "roles": [
+      "Support",
+      "Escape",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 95,
+    "localized_name": "Troll Warlord",
+    "internal_name": "npc_dota_hero_troll_warlord",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Pusher",
+      "Disabler",
+      "Durable"
+    ]
+  },
+  {
+    "hero_id": 96,
+    "localized_name": "Centaur Warrunner",
+    "internal_name": "npc_dota_hero_centaur",
+    "primary_attr": "str",
+    "roles": [
+      "Durable",
+      "Initiator",
+      "Disabler",
+      "Nuker",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 101,
+    "localized_name": "Skywrath Mage",
+    "internal_name": "npc_dota_hero_skywrath_mage",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 26,
+    "localized_name": "Lion",
+    "internal_name": "npc_dota_hero_lion",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Disabler",
+      "Nuker",
+      "Initiator"
+    ]
+  },
+  {
+    "hero_id": 27,
+    "localized_name": "Shadow Shaman",
+    "internal_name": "npc_dota_hero_shadow_shaman",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Pusher",
+      "Disabler",
+      "Nuker",
+      "Initiator"
+    ]
+  },
+  {
+    "hero_id": 28,
+    "localized_name": "Slardar",
+    "internal_name": "npc_dota_hero_slardar",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Durable",
+      "Initiator",
+      "Disabler",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 33,
+    "localized_name": "Enigma",
+    "internal_name": "npc_dota_hero_enigma",
+    "primary_attr": "all",
+    "roles": [
+      "Disabler",
+      "Initiator",
+      "Pusher"
+    ]
+  },
+  {
+    "hero_id": 34,
+    "localized_name": "Tinker",
+    "internal_name": "npc_dota_hero_tinker",
+    "primary_attr": "int",
+    "roles": [
+      "Carry",
+      "Nuker",
+      "Pusher"
+    ]
+  },
+  {
+    "hero_id": 35,
+    "localized_name": "Sniper",
+    "internal_name": "npc_dota_hero_sniper",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 39,
+    "localized_name": "Queen of Pain",
+    "internal_name": "npc_dota_hero_queenofpain",
+    "primary_attr": "int",
+    "roles": [
+      "Carry",
+      "Nuker",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 41,
+    "localized_name": "Faceless Void",
+    "internal_name": "npc_dota_hero_faceless_void",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Initiator",
+      "Disabler",
+      "Escape",
+      "Durable"
+    ]
+  },
+  {
+    "hero_id": 42,
+    "localized_name": "Wraith King",
+    "internal_name": "npc_dota_hero_skeleton_king",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Support",
+      "Durable",
+      "Disabler",
+      "Initiator"
+    ]
+  },
+  {
+    "hero_id": 58,
+    "localized_name": "Enchantress",
+    "internal_name": "npc_dota_hero_enchantress",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Pusher",
+      "Durable",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 59,
+    "localized_name": "Huskar",
+    "internal_name": "npc_dota_hero_huskar",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Durable",
+      "Initiator"
+    ]
+  },
+  {
+    "hero_id": 61,
+    "localized_name": "Broodmother",
+    "internal_name": "npc_dota_hero_broodmother",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Pusher",
+      "Escape",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 65,
+    "localized_name": "Batrider",
+    "internal_name": "npc_dota_hero_batrider",
+    "primary_attr": "all",
+    "roles": [
+      "Initiator",
+      "Disabler",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 69,
+    "localized_name": "Doom",
+    "internal_name": "npc_dota_hero_doom_bringer",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Disabler",
+      "Initiator",
+      "Durable",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 76,
+    "localized_name": "Outworld Destroyer",
+    "internal_name": "npc_dota_hero_obsidian_destroyer",
+    "primary_attr": "int",
+    "roles": [
+      "Carry",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 79,
+    "localized_name": "Shadow Demon",
+    "internal_name": "npc_dota_hero_shadow_demon",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Disabler",
+      "Initiator",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 80,
+    "localized_name": "Lone Druid",
+    "internal_name": "npc_dota_hero_lone_druid",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Pusher",
+      "Durable"
+    ]
+  },
+  {
+    "hero_id": 81,
+    "localized_name": "Chaos Knight",
+    "internal_name": "npc_dota_hero_chaos_knight",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Disabler",
+      "Durable",
+      "Pusher",
+      "Initiator"
+    ]
+  },
+  {
+    "hero_id": 85,
+    "localized_name": "Undying",
+    "internal_name": "npc_dota_hero_undying",
+    "primary_attr": "str",
+    "roles": [
+      "Support",
+      "Durable",
+      "Disabler",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 88,
+    "localized_name": "Nyx Assassin",
+    "internal_name": "npc_dota_hero_nyx_assassin",
+    "primary_attr": "all",
+    "roles": [
+      "Disabler",
+      "Nuker",
+      "Initiator",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 3,
+    "localized_name": "Bane",
+    "internal_name": "npc_dota_hero_bane",
+    "primary_attr": "all",
+    "roles": [
+      "Support",
+      "Disabler",
+      "Nuker",
+      "Durable"
+    ]
+  },
+  {
+    "hero_id": 7,
+    "localized_name": "Earthshaker",
+    "internal_name": "npc_dota_hero_earthshaker",
+    "primary_attr": "str",
+    "roles": [
+      "Support",
+      "Initiator",
+      "Disabler",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 8,
+    "localized_name": "Juggernaut",
+    "internal_name": "npc_dota_hero_juggernaut",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Pusher",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 9,
+    "localized_name": "Mirana",
+    "internal_name": "npc_dota_hero_mirana",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Support",
+      "Escape",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 11,
+    "localized_name": "Shadow Fiend",
+    "internal_name": "npc_dota_hero_nevermore",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 10,
+    "localized_name": "Morphling",
+    "internal_name": "npc_dota_hero_morphling",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Durable",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 12,
+    "localized_name": "Phantom Lancer",
+    "internal_name": "npc_dota_hero_phantom_lancer",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Pusher",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 13,
+    "localized_name": "Puck",
+    "internal_name": "npc_dota_hero_puck",
+    "primary_attr": "int",
+    "roles": [
+      "Initiator",
+      "Disabler",
+      "Escape",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 14,
+    "localized_name": "Pudge",
+    "internal_name": "npc_dota_hero_pudge",
+    "primary_attr": "str",
+    "roles": [
+      "Disabler",
+      "Initiator",
+      "Durable",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 15,
+    "localized_name": "Razor",
+    "internal_name": "npc_dota_hero_razor",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Durable",
+      "Nuker",
+      "Pusher"
+    ]
+  },
+  {
+    "hero_id": 17,
+    "localized_name": "Storm Spirit",
+    "internal_name": "npc_dota_hero_storm_spirit",
+    "primary_attr": "int",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Nuker",
+      "Initiator",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 18,
+    "localized_name": "Sven",
+    "internal_name": "npc_dota_hero_sven",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Disabler",
+      "Initiator",
+      "Durable",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 19,
+    "localized_name": "Tiny",
+    "internal_name": "npc_dota_hero_tiny",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Nuker",
+      "Pusher",
+      "Initiator",
+      "Durable",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 21,
+    "localized_name": "Windranger",
+    "internal_name": "npc_dota_hero_windrunner",
+    "primary_attr": "all",
+    "roles": [
+      "Carry",
+      "Support",
+      "Disabler",
+      "Escape",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 22,
+    "localized_name": "Zeus",
+    "internal_name": "npc_dota_hero_zuus",
+    "primary_attr": "int",
+    "roles": [
+      "Nuker",
+      "Carry"
+    ]
+  },
+  {
+    "hero_id": 25,
+    "localized_name": "Lina",
+    "internal_name": "npc_dota_hero_lina",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Carry",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 5,
+    "localized_name": "Crystal Maiden",
+    "internal_name": "npc_dota_hero_crystal_maiden",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Disabler",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 6,
+    "localized_name": "Drow Ranger",
+    "internal_name": "npc_dota_hero_drow_ranger",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Disabler",
+      "Pusher"
+    ]
+  },
+  {
+    "hero_id": 45,
+    "localized_name": "Pugna",
+    "internal_name": "npc_dota_hero_pugna",
+    "primary_attr": "int",
+    "roles": [
+      "Nuker",
+      "Pusher"
+    ]
+  },
+  {
+    "hero_id": 47,
+    "localized_name": "Viper",
+    "internal_name": "npc_dota_hero_viper",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Durable",
+      "Initiator",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 48,
+    "localized_name": "Luna",
+    "internal_name": "npc_dota_hero_luna",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Nuker",
+      "Pusher"
+    ]
+  },
+  {
+    "hero_id": 50,
+    "localized_name": "Dazzle",
+    "internal_name": "npc_dota_hero_dazzle",
+    "primary_attr": "all",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 51,
+    "localized_name": "Clockwerk",
+    "internal_name": "npc_dota_hero_rattletrap",
+    "primary_attr": "str",
+    "roles": [
+      "Initiator",
+      "Disabler",
+      "Durable",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 52,
+    "localized_name": "Leshrac",
+    "internal_name": "npc_dota_hero_leshrac",
+    "primary_attr": "int",
+    "roles": [
+      "Carry",
+      "Support",
+      "Nuker",
+      "Pusher",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 53,
+    "localized_name": "Nature's Prophet",
+    "internal_name": "npc_dota_hero_furion",
+    "primary_attr": "all",
+    "roles": [
+      "Carry",
+      "Pusher",
+      "Escape",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 54,
+    "localized_name": "Lifestealer",
+    "internal_name": "npc_dota_hero_life_stealer",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Durable",
+      "Escape",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 55,
+    "localized_name": "Dark Seer",
+    "internal_name": "npc_dota_hero_dark_seer",
+    "primary_attr": "int",
+    "roles": [
+      "Initiator",
+      "Escape",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 89,
+    "localized_name": "Naga Siren",
+    "internal_name": "npc_dota_hero_naga_siren",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Support",
+      "Pusher",
+      "Disabler",
+      "Initiator",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 90,
+    "localized_name": "Keeper of the Light",
+    "internal_name": "npc_dota_hero_keeper_of_the_light",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 104,
+    "localized_name": "Legion Commander",
+    "internal_name": "npc_dota_hero_legion_commander",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Disabler",
+      "Initiator",
+      "Durable",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 106,
+    "localized_name": "Ember Spirit",
+    "internal_name": "npc_dota_hero_ember_spirit",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Nuker",
+      "Disabler",
+      "Initiator"
+    ]
+  },
+  {
+    "hero_id": 107,
+    "localized_name": "Earth Spirit",
+    "internal_name": "npc_dota_hero_earth_spirit",
+    "primary_attr": "str",
+    "roles": [
+      "Nuker",
+      "Escape",
+      "Disabler",
+      "Initiator",
+      "Durable"
+    ]
+  },
+  {
+    "hero_id": 109,
+    "localized_name": "Terrorblade",
+    "internal_name": "npc_dota_hero_terrorblade",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Pusher",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 112,
+    "localized_name": "Winter Wyvern",
+    "internal_name": "npc_dota_hero_winter_wyvern",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Disabler",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 113,
+    "localized_name": "Arc Warden",
+    "internal_name": "npc_dota_hero_arc_warden",
+    "primary_attr": "all",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 108,
+    "localized_name": "Underlord",
+    "internal_name": "npc_dota_hero_abyssal_underlord",
+    "primary_attr": "str",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Disabler",
+      "Durable",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 114,
+    "localized_name": "Monkey King",
+    "internal_name": "npc_dota_hero_monkey_king",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Disabler",
+      "Initiator"
+    ]
+  },
+  {
+    "hero_id": 120,
+    "localized_name": "Pangolier",
+    "internal_name": "npc_dota_hero_pangolier",
+    "primary_attr": "all",
+    "roles": [
+      "Carry",
+      "Nuker",
+      "Disabler",
+      "Durable",
+      "Escape",
+      "Initiator"
+    ]
+  },
+  {
+    "hero_id": 119,
+    "localized_name": "Dark Willow",
+    "internal_name": "npc_dota_hero_dark_willow",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Disabler",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 136,
+    "localized_name": "Marci",
+    "internal_name": "npc_dota_hero_marci",
+    "primary_attr": "all",
+    "roles": [
+      "Support",
+      "Carry",
+      "Initiator",
+      "Disabler",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 137,
+    "localized_name": "Primal Beast",
+    "internal_name": "npc_dota_hero_primal_beast",
+    "primary_attr": "str",
+    "roles": [
+      "Initiator",
+      "Durable",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 138,
+    "localized_name": "Muerta",
+    "internal_name": "npc_dota_hero_muerta",
+    "primary_attr": "int",
+    "roles": [
+      "Carry",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 87,
+    "localized_name": "Disruptor",
+    "internal_name": "npc_dota_hero_disruptor",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Disabler",
+      "Nuker",
+      "Initiator"
+    ]
+  },
+  {
+    "hero_id": 129,
+    "localized_name": "Mars",
+    "internal_name": "npc_dota_hero_mars",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Initiator",
+      "Disabler",
+      "Durable"
+    ]
+  },
+  {
+    "hero_id": 66,
+    "localized_name": "Chen",
+    "internal_name": "npc_dota_hero_chen",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Pusher"
+    ]
+  },
+  {
+    "hero_id": 68,
+    "localized_name": "Ancient Apparition",
+    "internal_name": "npc_dota_hero_ancient_apparition",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Disabler",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 70,
+    "localized_name": "Ursa",
+    "internal_name": "npc_dota_hero_ursa",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Durable",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 72,
+    "localized_name": "Gyrocopter",
+    "internal_name": "npc_dota_hero_gyrocopter",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 71,
+    "localized_name": "Spirit Breaker",
+    "internal_name": "npc_dota_hero_spirit_breaker",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Initiator",
+      "Disabler",
+      "Durable",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 126,
+    "localized_name": "Void Spirit",
+    "internal_name": "npc_dota_hero_void_spirit",
+    "primary_attr": "all",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 128,
+    "localized_name": "Snapfire",
+    "internal_name": "npc_dota_hero_snapfire",
+    "primary_attr": "all",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Disabler",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 123,
+    "localized_name": "Hoodwink",
+    "internal_name": "npc_dota_hero_hoodwink",
+    "primary_attr": "agi",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Escape",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 135,
+    "localized_name": "Dawnbreaker",
+    "internal_name": "npc_dota_hero_dawnbreaker",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Durable"
+    ]
+  },
+  {
+    "hero_id": 74,
+    "localized_name": "Invoker",
+    "internal_name": "npc_dota_hero_invoker",
+    "primary_attr": "int",
+    "roles": [
+      "Carry",
+      "Nuker",
+      "Disabler",
+      "Escape",
+      "Pusher"
+    ]
+  },
+  {
+    "hero_id": 75,
+    "localized_name": "Silencer",
+    "internal_name": "npc_dota_hero_silencer",
+    "primary_attr": "int",
+    "roles": [
+      "Carry",
+      "Support",
+      "Disabler",
+      "Initiator",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 93,
+    "localized_name": "Slark",
+    "internal_name": "npc_dota_hero_slark",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Disabler",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 121,
+    "localized_name": "Grimstroke",
+    "internal_name": "npc_dota_hero_grimstroke",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Disabler",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 67,
+    "localized_name": "Spectre",
+    "internal_name": "npc_dota_hero_spectre",
+    "primary_attr": "all",
+    "roles": [
+      "Carry",
+      "Durable",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 98,
+    "localized_name": "Timbersaw",
+    "internal_name": "npc_dota_hero_shredder",
+    "primary_attr": "str",
+    "roles": [
+      "Nuker",
+      "Durable",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 99,
+    "localized_name": "Bristleback",
+    "internal_name": "npc_dota_hero_bristleback",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Durable",
+      "Initiator",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 100,
+    "localized_name": "Tusk",
+    "internal_name": "npc_dota_hero_tusk",
+    "primary_attr": "str",
+    "roles": [
+      "Initiator",
+      "Disabler",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 102,
+    "localized_name": "Abaddon",
+    "internal_name": "npc_dota_hero_abaddon",
+    "primary_attr": "all",
+    "roles": [
+      "Support",
+      "Carry",
+      "Durable"
+    ]
+  },
+  {
+    "hero_id": 131,
+    "localized_name": "Ringmaster",
+    "internal_name": "npc_dota_hero_ringmaster",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Escape",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 145,
+    "localized_name": "Kez",
+    "internal_name": "npc_dota_hero_kez",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 111,
+    "localized_name": "Oracle",
+    "internal_name": "npc_dota_hero_oracle",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Disabler",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 105,
+    "localized_name": "Techies",
+    "internal_name": "npc_dota_hero_techies",
+    "primary_attr": "all",
+    "roles": [
+      "Nuker",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 56,
+    "localized_name": "Clinkz",
+    "internal_name": "npc_dota_hero_clinkz",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Pusher"
+    ]
+  },
+  {
+    "hero_id": 110,
+    "localized_name": "Phoenix",
+    "internal_name": "npc_dota_hero_phoenix",
+    "primary_attr": "str",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Initiator",
+      "Escape",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 1,
+    "localized_name": "Anti-Mage",
+    "internal_name": "npc_dota_hero_antimage",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Escape",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 16,
+    "localized_name": "Sand King",
+    "internal_name": "npc_dota_hero_sand_king",
+    "primary_attr": "all",
+    "roles": [
+      "Initiator",
+      "Disabler",
+      "Support",
+      "Nuker",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 83,
+    "localized_name": "Treant Protector",
+    "internal_name": "npc_dota_hero_treant",
+    "primary_attr": "str",
+    "roles": [
+      "Support",
+      "Initiator",
+      "Durable",
+      "Disabler",
+      "Escape"
+    ]
+  },
+  {
+    "hero_id": 49,
+    "localized_name": "Dragon Knight",
+    "internal_name": "npc_dota_hero_dragon_knight",
+    "primary_attr": "str",
+    "roles": [
+      "Carry",
+      "Pusher",
+      "Durable",
+      "Disabler",
+      "Initiator",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 62,
+    "localized_name": "Bounty Hunter",
+    "internal_name": "npc_dota_hero_bounty_hunter",
+    "primary_attr": "agi",
+    "roles": [
+      "Escape",
+      "Nuker"
+    ]
+  },
+  {
+    "hero_id": 2,
+    "localized_name": "Axe",
+    "internal_name": "npc_dota_hero_axe",
+    "primary_attr": "str",
+    "roles": [
+      "Initiator",
+      "Durable",
+      "Disabler",
+      "Carry"
+    ]
+  },
+  {
+    "hero_id": 4,
+    "localized_name": "Bloodseeker",
+    "internal_name": "npc_dota_hero_bloodseeker",
+    "primary_attr": "agi",
+    "roles": [
+      "Carry",
+      "Disabler",
+      "Nuker",
+      "Initiator"
+    ]
+  },
+  {
+    "hero_id": 40,
+    "localized_name": "Venomancer",
+    "internal_name": "npc_dota_hero_venomancer",
+    "primary_attr": "all",
+    "roles": [
+      "Support",
+      "Nuker",
+      "Initiator",
+      "Pusher",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 37,
+    "localized_name": "Warlock",
+    "internal_name": "npc_dota_hero_warlock",
+    "primary_attr": "int",
+    "roles": [
+      "Support",
+      "Initiator",
+      "Disabler"
+    ]
+  },
+  {
+    "hero_id": 20,
+    "localized_name": "Vengeful Spirit",
+    "internal_name": "npc_dota_hero_vengefulspirit",
+    "primary_attr": "agi",
+    "roles": [
+      "Support",
+      "Initiator",
+      "Disabler",
+      "Nuker",
+      "Escape"
+    ]
+  }
+]

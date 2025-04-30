@@ -1,10 +1,11 @@
-import { type DotaMatchHistory, type DotaPlayerAccount, type MatchDetails, type PlayerMatchContributions } from "../../../types/index";
+import { type BuybackLog, type Log } from "./../../../types/index";
+import { type DotaMatchHistory, type DotaPlayerAccount, type KillsLog, type MatchDetails, type Objec, type PlayerMatchContributions, type PurchaseLog } from "../../../types/index";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "~/server/api/trpc";
 
 export const dotaRouter = createTRPCRouter({
   getMatchHistory: protectedProcedure 
-    .query(async ({ input, ctx}) => {  
+    .query(async ({ctx}) => {  
       const user = ctx.session.user;
       const db = ctx.db;
       if (!user) {
@@ -101,18 +102,10 @@ export const dotaRouter = createTRPCRouter({
           rt.name AS radiant_team_name,
           dt.name AS dire_team_name,
           pl.personaname AS player_name,
-          h.localized_name AS hero_played, 
-          i0.localized_name AS item_0_name,
-          i1.localized_name AS item_1_name,
-          i2.localized_name AS item_2_name,
-          i3.localized_name AS item_3_name,
-          i4.localized_name AS item_4_name,
-          i5.localized_name AS item_5_name,
-          ineutral.localized_name AS item_neutral_name,
-          bp0.localized_name AS backpack_0_name,
-          bp1.localized_name AS backpack_1_name,
-          bp2.localized_name AS backpack_2_name,
-          pm.*
+          h.localized_name AS hero_played,   
+          pm.purchase_log, 
+          pm.kills_log, 
+          pm.buyback_log
         FROM player_matches pm
         JOIN matches m ON pm.match_id = m.match_id  
         JOIN players pl ON pm.account_id = pl.account_id
@@ -139,14 +132,28 @@ export const dotaRouter = createTRPCRouter({
 
       try {
         const responseMatch = await fetch(apiQueryMatch);
-        const responsePlayerDetails = await fetch(apiQueryPlayerDetails);
-           
-  
+        const responsePlayerDetails = await fetch(apiQueryPlayerDetails); 
+
         const dataMatch = ((await responseMatch.json()) as {rows: MatchDetails[]}).rows[0]; 
+        const dataPlayerDetails = (await responsePlayerDetails.json() as {rows: PlayerMatchContributions[]}).rows; 
 
+        let fullLogsOfMatch = (dataMatch?.objectives ?? []) as (Log)[];
 
-        const dataPlayerDetails = (await responsePlayerDetails.json()) as PlayerMatchContributions[]; 
-        return { dataMatch, dataPlayerDetails };
+        if(dataPlayerDetails.length > 0) { 
+          dataPlayerDetails.forEach((p) => {
+            const logs = [
+              p.buyback_log.map((log) => ({ ...log, type: "buyback_log", player_name: p.player_name, hero_name: p.hero_played })),
+              p.kills_log.map((log) => ({ ...log, type: "kills_log", player_name: p.player_name, hero_name: p.hero_played })),
+              p.purchase_log.map((log) => ({ ...log, type: "purchase_log", player_name: p.player_name, hero_name: p.hero_played })),
+            ].flat(); 
+            fullLogsOfMatch.push(...logs); ;
+          });
+        }         
+
+        fullLogsOfMatch = fullLogsOfMatch.filter((log) => log !== null && log !== undefined);
+        fullLogsOfMatch.sort((a, b) => (a.time) - (b.time));
+
+        return { dataMatch, dataPlayerDetails, logs: fullLogsOfMatch };
       } catch (error) {
         console.error("Error fetching match details:", error);
         return null;
@@ -154,3 +161,4 @@ export const dotaRouter = createTRPCRouter({
 
     }),
 });
+

@@ -11,20 +11,22 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../../../components/ui
 import { Card, CardContent } from "../../../components/ui/card";
 import { Loader2 } from "lucide-react";
 import { api } from "~/utils/api";
-import type { MatchDetails } from "~/types";
+import type { Log, MatchDetails } from "~/types";
 
 export default function Home() {
   const [matchData, setMatchData] = useState<MatchDetails | null>(null);
+  const [fullLogs, setFullLogs] = useState<Log[] | null>(null);
   const [loading, setLoading] = useState(true);
 
   const getMatches = api.dota.getMatchFullDetails.useMutation();
 
   useEffect(() => {
-    const matchId = window.location.pathname.split("/").pop(); // Get the match ID from the URL
+    const matchId = window.location.pathname.split("/").pop();  
     if (matchId) {
       getMatches.mutate({ matchId:8270889523 }, {
         onSuccess: (data) => {
           setMatchData(data?.dataMatch ? data?.dataMatch : null);
+          setFullLogs(data?.logs ? data?.logs : null);
           setLoading(false);
         },
         onError: () => {
@@ -112,7 +114,7 @@ export default function Home() {
           <TabsContent value="objectives">
             <Card>
               <CardContent className="pt-6">
-                <ObjectivesTimeline {...matchData} />
+                <ObjectivesTimeline fullLogs={fullLogs} />
               </CardContent>
             </Card>
           </TabsContent>

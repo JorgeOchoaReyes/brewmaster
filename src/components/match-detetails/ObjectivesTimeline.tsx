@@ -1,9 +1,20 @@
 import { formatDuration } from "./formatters";
 import { CardContent, CardHeader, CardTitle } from "../../components/ui/card";
 import { Building, Flag, Truck } from "lucide-react";
-import type { MatchDetails } from "~/types";
+import type {  
+  Log
+} from "~/types";
  
-export default function ObjectivesTimeline({ objectives }: MatchDetails) { 
+export default function ObjectivesTimeline({ fullLogs }: {
+  fullLogs: (Log)[] | null;
+}) { 
+  if(!fullLogs || fullLogs.length === 0) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <p className="text-lg text-gray-500">No objectives data available</p>
+      </div>
+    );
+  }
   const getObjectiveTypeName = (type: string) => {
     const types: Record<string, string> = {
       CHAT_MESSAGE_COURIER_LOST: "Courier Killed",
@@ -11,6 +22,9 @@ export default function ObjectivesTimeline({ objectives }: MatchDetails) {
       CHAT_MESSAGE_AEGIS: "Aegis Picked Up",
       CHAT_MESSAGE_ROSHAN_KILL: "Roshan Killed",
       building_kill: "Building Destroyed",
+      buyback_log: "Buyback",
+      kills_log: "Kill",
+      purchase_log: "Item Purchased",
     };
     return types[type] ?? type;
   };
@@ -76,31 +90,42 @@ export default function ObjectivesTimeline({ objectives }: MatchDetails) {
         <CardTitle>Objectives Timeline</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="relative">
+        <div className="relative overflow-scroll h-screen">
           <div className="absolute left-3 top-0 bottom-0 w-0.5 bg-gray-200"></div>
           <div className="space-y-4 ml-8">
-            {objectives.map((objective, index) => (
-              <div key={index} className="relative pb-4">
-                <div className="absolute -left-8 mt-1 flex items-center justify-center w-6 h-6 rounded-full bg-gray-100">
-                  {getObjectiveIcon(objective.type)}
-                </div>
-                <div className="text-sm text-gray-500 mb-1">{formatDuration(objective.time)}</div>
-                <div className="font-medium">{getObjectiveTypeName(objective.type)}</div>
-                {objective.type === "building_kill" && (
-                  <div className="text-sm text-gray-600">{getBuildingName(objective?.key as string)}</div>
-                )}
-                {objective.type === "CHAT_MESSAGE_COURIER_LOST" && (
-                  <div className="text-sm text-gray-600">
-                    {objective.team === 2 ? "Radiant" : "Dire"} courier killed
+            {fullLogs?.map((objective, index) => {
+              if(!objective) return null; 
+              return (
+                <div key={index} className="relative pb-4">
+                  <div className="absolute -left-8 mt-1 flex items-center justify-center w-6 h-6 rounded-full bg-gray-100">
+                    {getObjectiveIcon(objective.type ?? "")}
                   </div>
-                )}
-                {objective.type === "CHAT_MESSAGE_ROSHAN_KILL" && (
-                  <div className="text-sm text-gray-600">
+                  <div className="text-sm text-gray-500 mb-1">{formatDuration(objective.time)}</div>
+                  <div className="font-medium">{getObjectiveTypeName(objective.type ?? "")}</div>
+                  {
+                    (objective.type === "buyback_log"||objective.type === "purchase_log"||objective.type === "kills_log") && (
+                      <>
+                        <div className="text-sm text-gray-600">{getBuildingName(objective?.key as string)}</div>
+                        <div className="text-sm text-gray-600">{objective?.hero_name}</div>
+                      </>
+                    )}
+                  {objective.type === "building_kill" && (
+                    <div className="text-sm text-gray-600">{getBuildingName(objective?.key as string)}</div>
+                  )}
+                  {objective.type === "CHAT_MESSAGE_COURIER_LOST" && (
+                    <div className="text-sm text-gray-600">
+                      {objective.team === 2 ? "Radiant" : "Dire"} courier killed
+                    </div>
+                  )}
+                  {objective.type === "CHAT_MESSAGE_ROSHAN_KILL" && (
+                    <div className="text-sm text-gray-600">
                     Roshan killed by {objective.team === 2 ? "Radiant" : "Dire"}
-                  </div>
-                )}
-              </div>
-            ))}
+                    </div>
+                  )}
+                </div>
+              ); 
+            }
+            )}
           </div>
         </div>
       </CardContent>
